@@ -1,8 +1,8 @@
 import { MessageCircle, Mail } from 'lucide-react';
 
 export default function Contact() {
-    const whatsappNumber = "1234567890"; // Replace with actual number
-    const emailAddress = "contact@example.com"; // Replace with actual email
+    const whatsappNumber = "+2290142000700";
+    const emailAddress = "follyazari@gmail.com";
 
     return (
         <section id="contact" className="pt-24 pb-12 bg-white relative overflow-hidden">
@@ -17,7 +17,7 @@ export default function Contact() {
                 </h2>
 
                 <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-                    Envoyez simplement vos photos ou vos questions et obtenez votre vidéo publicitaire professionnelle rapidement.
+                    Envoyez simplement la photo de votre produit  et obtenez votre vidéo publicitaire professionnelle qui booste vos ventes.
                 </p>
 
                 <div className="flex flex-col items-center gap-8 mb-16">

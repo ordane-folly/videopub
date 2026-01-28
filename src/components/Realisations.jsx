@@ -11,44 +11,55 @@ export default function Realisations() {
     const [selectedVideo, setSelectedVideo] = useState(null);
 
     const portraitVideos = [
-        { src: vid1, title: "Produit 1", benefit: "Imaginez votre produit captivant l'attention instantanément." },
-        { src: vid2, title: "Produit 2", benefit: "Transformez vos visiteurs en acheteurs fidèles." },
-        { src: vid3, title: "Produit 3", benefit: "Une présentation dynamique qui sublime votre offre." },
+        { src: vid1, title: "Cuisinière", benefit: "Imaginez votre produit captivant l'attention instantanément." },
+        { src: vid2, title: "Chaussures", benefit: "Transformez vos visiteurs en acheteurs fidèles." },
+        { src: vid3, title: "Ordinateur", benefit: "Une présentation dynamique qui sublime votre offre." },
     ];
 
     const landscapeVideos = [
-        { src: vid4, title: "Produit 4", benefit: "Expliquez votre valeur ajoutée en quelques secondes." },
-        { src: vid5, title: "Produit 5", benefit: "Créez une connexion émotionnelle avec votre audience." },
-        { src: vid6, title: "Produit 6", benefit: "Boostez vos conversions grâce à un visuel impactant." },
+        { src: vid4, title: "Sac à dos", benefit: "Expliquez votre valeur ajoutée en quelques secondes." },
+        { src: vid5, title: "Mixeur", benefit: "Créez une connexion émotionnelle avec votre audience." },
+        { src: vid6, title: "Ecouteur bluetooth", benefit: "Boostez vos conversions grâce à un visuel impactant." },
     ];
 
-    const VideoCard = ({ video, aspect }) => (
-        <div
-            className="group relative cursor-pointer"
-            onClick={() => setSelectedVideo(video)}
-        >
-            <div className={`relative ${aspect} rounded-2xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-[1.02]`}>
-                <video
-                    src={video.src}
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                />
-                {/* Overlay on hover indicating click action */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
-                        <span className="text-white font-bold">Agrandir</span>
+    const VideoCard = ({ video, aspect }) => {
+        const [isLoaded, setIsLoaded] = useState(false);
+
+        return (
+            <div
+                className="group relative cursor-pointer"
+                onClick={() => setSelectedVideo(video)}
+            >
+                <div className={`relative ${aspect} rounded-2xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-[1.02] bg-gray-100`}>
+
+                    {/* Loader */}
+                    <div className={`absolute inset-0 z-10 flex items-center justify-center bg-gray-100 transition-opacity duration-500 ${isLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                        <div className="w-10 h-10 border-4 border-gray-200 border-t-secondary rounded-full animate-spin"></div>
+                    </div>
+
+                    <video
+                        src={video.src}
+                        className={`w-full h-full object-cover transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        onLoadedData={() => setIsLoaded(true)}
+                    />
+                    {/* Overlay on hover indicating click action */}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100 z-20">
+                        <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
+                            <span className="text-white font-bold">Agrandir</span>
+                        </div>
                     </div>
                 </div>
+                <div className="mt-4 text-center">
+                    <h3 className="font-bold text-lg text-gray-900">{video.title}</h3>
+                    <p className="text-sm text-gray-500 italic mt-1">{video.benefit}</p>
+                </div>
             </div>
-            <div className="mt-4 text-center">
-                <h3 className="font-bold text-lg text-gray-900">{video.title}</h3>
-                <p className="text-sm text-gray-500 italic mt-1">{video.benefit}</p>
-            </div>
-        </div>
-    );
+        );
+    };
 
     return (
         <section id="realisations" className="py-20 bg-white">
@@ -56,10 +67,10 @@ export default function Realisations() {
 
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <span className="text-secondary font-bold tracking-wide uppercase text-sm mb-2 block">
+                    <span className="text-secondary font-bold tracking-wide uppercase text-4xl mb-2 block">
                         NOS RÉALISATIONS
                     </span>
-                    <h2 className="text-4xl font-bold text-gray-900 uppercase tracking-tight mb-4">
+                    <h2 className="text-3xl font-bold text-gray-900 uppercase tracking-tight mb-4">
                         Nos vidéos publicitaires en action
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">

@@ -1,6 +1,9 @@
+
 import heroVideo from '../assets/hero-video.mp4';
 
 export default function Hero() {
+
+
     return (
         <div className="relative w-full h-screen overflow-hidden">
             {/* Background Video */}
@@ -30,7 +33,7 @@ export default function Hero() {
                         href="#services"
                         className="inline-block px-10 py-4 bg-secondary text-white text-lg font-semibold rounded-full shadow-lg hover:bg-orange-600 hover:shadow-orange-500/50 hover:-translate-y-1 transition-all duration-300"
                     >
-                        Nos Services
+                        Notre Service
                     </a>
                 </div>
             </div>

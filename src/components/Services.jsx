@@ -45,8 +45,7 @@ export default function Services() {
                         Boostez vos ventes avec des vidéos publicitaires percutantes
                     </h2>
                     <p className="text-xl text-gray-600 leading-relaxed">
-                        J’aide les e-commerçants et entreprises à booster leurs ventes avec des vidéos publicitairespercutantes
-                        créées grâce à l’IA et optimisées sur Canva pour un rendu unique.
+                        Nous aidons les e-commerçants et entreprises à augmenter leurs ventes grâce à des vidéos publicitaires percutantes, créées avec l’IA et optimisées sur Canva, réalisées uniquement à partir des photos de leurs produits.
                     </p>
                 </div>
 

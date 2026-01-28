@@ -12,12 +12,12 @@ export default function Footer() {
                         <img
                             src={logoImage}
                             alt="Logo"
-                            className="h-12 w-auto object-contain brightness-0 invert"
+                            className="h-12 w-auto object-contain"
                         />
                         <div className="flex flex-col items-start">
-                            <span className="text-xl font-bold text-white tracking-tight">Pub Vidéo Boost</span>
+                            <span className="text-xl font-bold tracking-tight"><span className="text-primary">Pub Vidéo</span> <span className="text-secondary">Boost</span></span>
                             <p className="text-gray-400 text-xs">
-                                Création de vidéos publicitaires qui convertissent.
+                                Création de vidéos publicitaires qui vendent.
                             </p>
                         </div>
                     </div>
@@ -32,16 +32,13 @@ export default function Footer() {
 
                     {/* Socials & Copyright */}
                     <div className="flex flex-col items-center md:items-end gap-4">
-                        <div className="flex gap-4">
-                            <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors">
-                                <Facebook size={18} />
+                        <div className="flex items-center gap-6">
+                            <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors text-white" aria-label="Facebook">
+                                <Facebook size={20} />
                             </a>
-                            <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors">
-                                <Instagram size={18} />
-                            </a>
-                            <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors">
-                                <Twitter size={18} />
-                            </a>
+                            <div className="text-white font-bold text-lg">
+                                +229 0142000700
+                            </div>
                         </div>
                         <p className="text-gray-500 text-xs text-center md:text-right">
                             © 2026 Pub Vidéo Boost. Tous droits réservés.

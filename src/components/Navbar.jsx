@@ -11,13 +11,13 @@ export default function Navbar() {
 
     const navLinks = [
         { name: 'Accueil', href: '#', type: 'link' },
-        { name: 'Services', href: '#services', type: 'link' },
+        { name: 'Service', href: '#services', type: 'link' },
         { name: 'Réalisations', href: '#realisations', type: 'button-primary' },
         { name: 'Contact', href: '#contact', type: 'button-secondary' },
     ];
 
     return (
-        <nav className="fixed w-full z-50 bg-white shadow-md">
+        <nav className=" fixed w-full z-50 bg-white shadow-md">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-24">
                     {/* Logo */}
@@ -28,7 +28,7 @@ export default function Navbar() {
                                 alt="Logo"
                                 className="h-20 w-auto object-contain"
                             />
-                            <span className="ml-3 text-xl font-bold text-gray-900 tracking-tight">Pub Vidéo Boost</span>
+                            <span className="ml-3 text-xl font-bold tracking-tight"><span className="text-primary">Pub Vidéo</span> <span className="text-secondary">Boost</span></span>
                         </a>
                     </div>
 
