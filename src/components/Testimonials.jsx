@@ -78,7 +78,6 @@ export default function Testimonials() {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-gray-900">{review.name}</h4>
-                                    <p className="text-xs text-secondary font-medium uppercase tracking-wide">{review.role}</p>
                                 </div>
                             </div>
                         </div>

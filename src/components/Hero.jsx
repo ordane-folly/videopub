@@ -1,22 +1,19 @@
 
-import heroVideo from '../assets/hero-video.mp4';
+import heroImage from '../assets/hero-image.jpg';
 
 export default function Hero() {
 
 
     return (
         <div className="relative w-full h-screen overflow-hidden">
-            {/* Background Video */}
-            <video
-                className="absolute top-0 left-0 w-full h-full object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-            >
-                <source src={heroVideo} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+            {/* Background Image */}
+            <div className="absolute inset-0 w-full h-full">
+                <img
+                    src={heroImage}
+                    alt="Background"
+                    className="w-full h-full object-cover"
+                />
+            </div>
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-blue-900/60 mix-blend-multiply"></div>

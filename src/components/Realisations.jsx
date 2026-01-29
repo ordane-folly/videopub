@@ -40,16 +40,18 @@ export default function Realisations() {
                     <video
                         src={video.src}
                         className={`w-full h-full object-cover transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-                        autoPlay
                         muted
                         loop
                         playsInline
                         onLoadedData={() => setIsLoaded(true)}
                     />
-                    {/* Overlay on hover indicating click action */}
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100 z-20">
-                        <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
-                            <span className="text-white font-bold">Agrandir</span>
+                    {/* Overlay with Button */}
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center z-20">
+                        <div className="absolute bottom-6 flex items-center justify-center transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                            <button className="bg-secondary text-white px-6 py-2 rounded-full font-bold shadow-lg hover:bg-orange-600 flex items-center gap-2">
+                                <span className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-white border-b-[6px] border-b-transparent ml-1"></span>
+                                Voir la vidéo
+                            </button>
                         </div>
                     </div>
                 </div>
