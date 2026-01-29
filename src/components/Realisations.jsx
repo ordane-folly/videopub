@@ -43,6 +43,7 @@ export default function Realisations() {
                         muted
                         loop
                         playsInline
+                        preload="auto"
                         onLoadedData={() => setIsLoaded(true)}
                     />
                     {/* Overlay with Button */}
